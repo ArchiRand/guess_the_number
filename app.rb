@@ -1,8 +1,8 @@
 @attempts = 1
 
-puts "Как тебя зовут?"
-@user_name = gets.chomp
-puts "Очень рад познакомиться, #{@user_name}"
+# puts "Как тебя зовут?"
+# @user_name = gets.chomp
+# puts "Очень рад познакомиться, #{@user_name}"
 
 puts 'В каком диапазоне ты хочешь отгадывать числа'
 answer = gets.chomp.to_i
@@ -26,14 +26,12 @@ def lets_play
     exit
   elsif delta == 1
     puts 'Горячо'
-  elsif delta <= 2
+  elsif delta >= 2 && delta < 4
     puts 'Тепло'
-  elsif delta == 3
+  elsif delta >= 4 && delta < 7
     puts 'Холодно'
-  elsif delta > 3 && delta <= 7
+  elsif delta >= 7 && delta <= 7
     puts 'Совсем холодно'
-  elsif delta > 7
-    puts 'Вообще холодрыга'
   end
 end
 
